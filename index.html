@@ -62,6 +62,8 @@
     <h1 id="set">Media Query : </h1>
     <h1 id="demo1"></h1>
     <h1 id="demo"></h1>
+      <h1 id="demoW1"></h1>
+    <h1 id="demoW"></h1>
 <script>
   
 document.getElementById("demo1").innerHTML += 
@@ -69,6 +71,12 @@ document.getElementById("demo1").innerHTML +=
   
 document.getElementById("demo").innerHTML = 
 "Screen height is " + screen.height ;
+    
+    document.getElementById("demo1").innerHTML += 
+"Page width is " + window.innerWidth;
+  
+document.getElementById("demo").innerHTML = 
+"Page height is " + screen.innerHeight ;
 </script>
 
 </body>
