@@ -65,6 +65,7 @@
       <h1 id="demoW1"></h1>
     <h1 id="demoW"></h1>
      <h1 id="demoType"></h1>
+     <h1 id="demoscreen"></h1>
 <script>
   
 document.getElementById("demo1").innerHTML += 
@@ -78,11 +79,33 @@ document.getElementById("demo").innerHTML =
   
 document.getElementById("demoW").innerHTML = 
 "Page height is " + screen.innerHeight ;
+    
+     const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
     document.getElementById("demoType").innerHTML = 
-"Page Type is " + navigator.userAgent ;
+"Page Type is tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+  document.getElementById("demoType").innerHTML = 
+"Page Type is mobile";
+  }
+   document.getElementById("demoType").innerHTML = 
+"Page Type is desktop";
+    
+   
    if(screen.availHeight > screen.availWidth){
-    alert("Please use Landscape!");
+     document.getElementById("demoscreen").innerHTML = 
+"portrait";
 }
+    else{
+        
+        document.getElementById("demoscreen").innerHTML = 
+"Landscape";
+    }
 </script>
 
 </body>
