@@ -82,19 +82,16 @@ document.getElementById("demoW").innerHTML =
     
      const ua = navigator.userAgent;
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-    document.getElementById("demoType").innerHTML = 
-"Page Type is tablet";
+          document.getElementById("demoType").innerHTML =  "Page Type is tablet";
   }
-  if (
-    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-      ua
-    )
-  ) {
-  document.getElementById("demoType").innerHTML = 
-"Page Type is mobile";
+  else if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+          document.getElementById("demoType").innerHTML = 
+        "Page Type is mobile";
   }
-   document.getElementById("demoType").innerHTML = 
-"Page Type is desktop";
+  else{
+               document.getElementById("demoType").innerHTML = 
+            "Page Type is desktop";
+  }
     
    
    if(screen.availHeight > screen.availWidth){
